@@ -1152,8 +1152,8 @@
 		"CORPORATE": "Unternehmen",
 		"MATERIAL_LIGHT_THEME": "Material Light",
 		"MATERIAL_DARK_THEME": "Material Dark",
-		"GAUZY_LIGHT": "Gauzy Light",
-		"GAUZY_DARK": "Gauzy Dark",
+		"GAUZY_LIGHT": "Inf Light",
+		"GAUZY_DARK": "Inf Dark",
 		"LANGUAGE": "Sprache",
 		"ENGLISH": "Englisch",
 		"FRENCH": "Französisch",
@@ -4863,7 +4863,7 @@
 			"PASSWORD": "Passwort"
 		},
 		"SIGN_IN_TITLE": "Anmeldung im Arbeitsbereich",
-        "SIGN_IN_SUBTITLE": "Geben Sie Ihre E-Mail-Adresse ein, um sich in Ihren Arbeitsbereich anzumelden",
+		"SIGN_IN_SUBTITLE": "Geben Sie Ihre E-Mail-Adresse ein, um sich in Ihren Arbeitsbereich anzumelden",
 		"BACK_TO": "Zurück zu",
 		"SUCCESS_SIGNIN_TITLE": "Herzlichen Glückwunsch! Sie haben sich erfolgreich in Ihren Arbeitsbereich eingeloggt.",
 		"SUCCESS_SIGNIN_SUB_TITLE": "Bitte haben Sie Geduld, während wir den Arbeitsbereich vorbereiten...",
@@ -4872,13 +4872,13 @@
 		"THANKING_TEXT": "Vielen Dank, dass Sie uns gewählt haben.",
 		"UNKNOWN_WORKSPACE": "Kennen Sie Ihren Arbeitsbereich nicht?",
 		"FIND_WORKSPACE": "Finden Sie Ihren Arbeitsbereich",
-        "CREATE": {
-            "TITLE": "Neuen Arbeitsbereich erstellen",
-            "SUBTITLE": "Geben Sie Ihre E-Mail-Adresse ein, um zu beginnen",
-            "SUCCESS_SENT_CODE_TITLE": "Wir haben einen Bestätigungscode gesendet an: ",
-            "SUCCESS_SENT_CODE_SUB_TITLE": "Bitte überprüfen Sie Ihre E-Mail und geben Sie den Code unten ein",
-            "CREATE_NEW_WORKSPACE": "Neuen Arbeitsbereich erstellen"
-        },
+		"CREATE": {
+			"TITLE": "Neuen Arbeitsbereich erstellen",
+			"SUBTITLE": "Geben Sie Ihre E-Mail-Adresse ein, um zu beginnen",
+			"SUCCESS_SENT_CODE_TITLE": "Wir haben einen Bestätigungscode gesendet an: ",
+			"SUCCESS_SENT_CODE_SUB_TITLE": "Bitte überprüfen Sie Ihre E-Mail und geben Sie den Code unten ein",
+			"CREATE_NEW_WORKSPACE": "Neuen Arbeitsbereich erstellen"
+		},
 		"FIND": {
 			"TITLE": "Finden Sie Ihren Arbeitsbereich",
 			"SUBTITLE": "Geben Sie Ihre E-Mail ein, um Ihre Arbeitsbereiche zu finden",

@@ -1403,68 +1403,32 @@ export class AuthService extends SocialAuthService {
 			const email = currentUser.email;
 			let users: User[];
 
-			// Check if the user has SUPER_ADMIN role
-			const isSuperAdmin = await this.roleService.findOneByWhereOptions({
-				id: currentUser.roleId,
-				name: RolesEnum.SUPER_ADMIN
-			}).then(role => !!role).catch(() => false);
-
-			// Find users based on role
 			switch (this.ormType) {
 				case MultiORMEnum.MikroORM:
-					if (isSuperAdmin) {
-						// For SUPER_ADMIN, get all active users across all tenants
-						const { where, mikroOptions } = parseTypeORMFindToMikroOrm<User>({
-							where: {
-								isActive: true,
-								isArchived: false,
-								tenantId: { $ne: null }
-							},
-							relations: { tenant: true },
-							order: { createdAt: 'DESC' }
-						});
-						users = (await this.mikroOrmUserRepository.find(where, mikroOptions)) as User[];
-					} else {
-						// For regular users, only get users with the same email
-						const { where, mikroOptions } = parseTypeORMFindToMikroOrm<User>({
-							where: {
-								email,
-								isActive: true,
-								isArchived: false,
-								tenantId: { $ne: null }
-							},
-							relations: { tenant: true },
-							order: { createdAt: 'DESC' }
-						});
-						users = (await this.mikroOrmUserRepository.find(where, mikroOptions)) as User[];
-					}
+					const { where, mikroOptions } = parseTypeORMFindToMikroOrm<User>({
+						where: {
+							email,
+							isActive: true,
+							isArchived: false,
+							tenantId: { $ne: null }
+						},
+						relations: { tenant: true },
+						order: { createdAt: 'DESC' }
+					});
+					users = (await this.mikroOrmUserRepository.find(where, mikroOptions)) as User[];
 					break;
 
 				case MultiORMEnum.TypeORM:
-					if (isSuperAdmin) {
-						// For SUPER_ADMIN, get all active users across all tenants
-						users = await this.typeOrmUserRepository.find({
-							where: {
-								isActive: true,
-								isArchived: false,
-								tenantId: Not(IsNull())
-							},
-							relations: { tenant: true },
-							order: { createdAt: 'DESC' }
-						});
-					} else {
-						// For regular users, only get users with the same email
-						users = await this.typeOrmUserRepository.find({
-							where: {
-								email,
-								isActive: true,
-								isArchived: false,
-								tenantId: Not(IsNull())
-							},
-							relations: { tenant: true },
-							order: { createdAt: 'DESC' }
-						});
-					}
+					users = await this.typeOrmUserRepository.find({
+						where: {
+							email,
+							isActive: true,
+							isArchived: false,
+							tenantId: Not(IsNull())
+						},
+						relations: { tenant: true },
+						order: { createdAt: 'DESC' }
+					});
 					break;
 
 				default:

@@ -61,7 +61,7 @@ export class SeedChangeLogFeature1654675304373 implements MigrationInterface {
 				title: 'New CRM',
 				date,
 				isFeature: 1,
-				content: 'Now you can read latest features changelog directly in Gauzy',
+				content: 'Now you can read latest features changelog directly in Infiria',
 				learnMoreUrl: '',
 				imageUrl: 'assets/images/features/macbook-2.png'
 			},
@@ -100,7 +100,7 @@ export class SeedChangeLogFeature1654675304373 implements MigrationInterface {
 		}
 	}
 
-	public async sqliteDownQueryRunner(queryRunner: QueryRunner): Promise<any> {}
+	public async sqliteDownQueryRunner(queryRunner: QueryRunner): Promise<any> { }
 
 	public async postgresUpQueryRunner(queryRunner: QueryRunner): Promise<any> {
 		console.log(chalk.yellow(this.name + ' start running!'));
@@ -112,7 +112,7 @@ export class SeedChangeLogFeature1654675304373 implements MigrationInterface {
 				title: 'New CRM',
 				date,
 				isFeature: true,
-				content: 'Now you can read latest features changelog directly in Gauzy',
+				content: 'Now you can read latest features changelog directly in Infiria',
 				learnMoreUrl: '',
 				imageUrl: 'assets/images/features/macbook-2.png'
 			},
@@ -150,19 +150,19 @@ export class SeedChangeLogFeature1654675304373 implements MigrationInterface {
 		}
 	}
 
-	public async postgresDownQueryRunner(queryRunner: QueryRunner): Promise<any> {}
+	public async postgresDownQueryRunner(queryRunner: QueryRunner): Promise<any> { }
 
 	/**
 	 * MySQL Up Migration
 	 *
 	 * @param queryRunner
 	 */
-	public async mysqlUpQueryRunner(queryRunner: QueryRunner): Promise<any> {}
+	public async mysqlUpQueryRunner(queryRunner: QueryRunner): Promise<any> { }
 
 	/**
 	 * MySQL Down Migration
 	 *
 	 * @param queryRunner
 	 */
-	public async mysqlDownQueryRunner(queryRunner: QueryRunner): Promise<any> {}
+	public async mysqlDownQueryRunner(queryRunner: QueryRunner): Promise<any> { }
 }

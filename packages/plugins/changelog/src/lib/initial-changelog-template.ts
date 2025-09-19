@@ -5,14 +5,14 @@ export const INITIAL_CHANGELOG_TEMPLATE: IChangelog[] = [
 		icon: 'cube-outline',
 		title: 'See new features',
 		date: new Date(),
-		content: 'Now you can read latest features changelog directly in Gauzy',
+		content: 'Now you can read latest features changelog directly in Infiria',
 		isFeature: false,
 		learnMoreUrl: '',
 		imageUrl: ''
 	},
 	{
 		icon: 'globe-outline',
-		title: 'Ready to give Gauzy a try?',
+		title: 'Ready to give Infiria a try?',
 		date: new Date(),
 		isFeature: false,
 		content:
@@ -26,7 +26,7 @@ export const INITIAL_CHANGELOG_TEMPLATE: IChangelog[] = [
 		date: new Date(),
 		isFeature: false,
 		content: 'You are welcome to check more information about the platform at our official website.',
-		learnMoreUrl: 'https://gauzy.co/',
+		learnMoreUrl: '',
 		imageUrl: ''
 	},
 	{
@@ -34,7 +34,7 @@ export const INITIAL_CHANGELOG_TEMPLATE: IChangelog[] = [
 		title: 'New CRM',
 		date: new Date(),
 		isFeature: true,
-		content: 'Now you can read latest features changelog directly in Gauzy',
+		content: 'Now you can read latest features changelog directly in Infiria',
 		learnMoreUrl: '',
 		imageUrl: 'assets/images/features/macbook-2.png'
 	},
